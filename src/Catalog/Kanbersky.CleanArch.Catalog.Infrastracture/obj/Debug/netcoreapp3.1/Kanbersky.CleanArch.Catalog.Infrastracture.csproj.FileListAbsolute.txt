@@ -1,0 +1,12 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Catalog.Infrastracture.pdb

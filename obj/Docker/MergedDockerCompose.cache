@@ -1,0 +1,49 @@
+services:
+  basketdb:
+    container_name: basketdb
+    image: redis
+    ports:
+    - published: 6379
+      target: 6379
+    restart: always
+  catalogdb:
+    container_name: catalogdb
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - /site:/data/db:rw
+  kanbersky.cleanarch.basket.api:
+    build:
+      context: D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch
+      dockerfile: src/Basket/Kanbersky.CleanArch.Basket.Api/Dockerfile
+    depends_on:
+      basketdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      RedisSettings:ConnectionString: basketdb:6379
+    image: kanberskycleanarchbasketapi
+    ports:
+    - published: 8001
+      target: 80
+  kanbersky.cleanarch.catalog.api:
+    build:
+      context: D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch
+      dockerfile: src/Catalog/Kanbersky.CleanArch.Catalog.Api/Dockerfile
+    depends_on:
+      catalogdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      CatalogDbSettings:ConnectionString: mongodb://catalogdb:27017
+    image: kanberskycleanarchcatalogapi
+    ports:
+    - published: 8000
+      target: 80
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
+version: '3.4'

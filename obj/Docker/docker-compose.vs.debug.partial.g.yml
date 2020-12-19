@@ -1,0 +1,57 @@
+version: '3.4'
+
+services:
+  kanbersky.cleanarch.basket.api:
+    image: kanberskycleanarchbasketapi:dev
+    container_name: Kanbersky.CleanArch.Basket.Api
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Kanbersky.CleanArch.Basket.Api"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_kanbersky.cleanarch.basket.api$
+    volumes:
+      - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.CleanArch.Basket.Api:/app
+      - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch:/src
+      - C:\Users\User\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_kanbersky.cleanarch.basket.api$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_kanbersky.cleanarch.basket.api$ \"/app/bin/Debug/netcoreapp3.1/Kanbersky.CleanArch.Basket.Api.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  kanbersky.cleanarch.catalog.api:
+    image: kanberskycleanarchcatalogapi:dev
+    container_name: Kanbersky.CleanArch.Catalog.Api
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Kanbersky.CleanArch.Catalog.Api"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_kanbersky.cleanarch.catalog.api$
+    volumes:
+      - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Api:/app
+      - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch:/src
+      - C:\Users\User\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_kanbersky.cleanarch.catalog.api$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_kanbersky.cleanarch.catalog.api$ \"/app/bin/Debug/netcoreapp3.1/Kanbersky.CleanArch.Catalog.Api.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
