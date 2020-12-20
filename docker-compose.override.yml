@@ -15,6 +15,14 @@ services:
         ports:
             - "6379:6379" 
 
+    orderdb:
+        container_name: orderdb
+        ports:
+            - "1433:1433"
+        #environment:
+            #SA_PASSWORD: "abc12345678"
+            #ACCEPT_EULA: "Y"
+
     rabbitmq:
         container_name: rabbitmq
         restart: always
@@ -23,6 +31,8 @@ services:
             - "15672:15672"
 
     kanbersky.cleanarch.basket.api:
+        container_name: basketapi
+        restart: on-failure
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
             - "RedisSettings:ConnectionString=basketdb:6379"
@@ -34,6 +44,8 @@ services:
             - "8001:80"
 
     kanbersky.cleanarch.catalog.api:
+        container_name: catalogapi
+        restart: on-failure
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
             - "CatalogDbSettings:ConnectionString=mongodb://catalogdb:27017"
@@ -44,3 +56,33 @@ services:
             - catalogdb
         ports:
             - "8000:80"
+
+    kanbersky.cleanarch.order.api:
+        container_name: orderapi
+        restart: on-failure
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "OrderDbSettings:ConnecionStrings=Server=orderdb;Database=OrderDb;Trusted_Connection=True;MultipleActiveResultSets=True"
+            - "RabbitMQSettings:HostName=rabbitmq"
+        depends_on:
+            - orderdb
+            - rabbitmq
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8002:80"
+
+    kanbersky.cleanarch.apigateway:
+        container_name: apigateway
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+        depends_on:
+            - kanbersky.cleanarch.order.api
+            - kanbersky.cleanarch.catalog.api
+            - kanbersky.cleanarch.basket.api
+        volumes:
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "7000:80"

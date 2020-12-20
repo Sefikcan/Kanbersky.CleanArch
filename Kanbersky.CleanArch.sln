@@ -34,7 +34,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.CleanArch.Order.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.CleanArch.Order.Infrastructure", "src\Order\Kanbersky.CleanArch.Order.Infrastructure\Kanbersky.CleanArch.Order.Infrastructure.csproj", "{3C8BD7F8-1032-490D-9339-DF9E4FB27BEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.CleanArch.Order.Services", "src\Order\Kanbersky.CleanArch.Order.Services\Kanbersky.CleanArch.Order.Services.csproj", "{88411227-A51F-4C1B-89F7-274BE74BE45F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.CleanArch.Order.Services", "src\Order\Kanbersky.CleanArch.Order.Services\Kanbersky.CleanArch.Order.Services.csproj", "{88411227-A51F-4C1B-89F7-274BE74BE45F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{8C8CCD87-2A76-4D08-9630-10CF8887FC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.CleanArch.ApiGateway", "src\ApiGateway\Kanbersky.CleanArch.ApiGateway\Kanbersky.CleanArch.ApiGateway.csproj", "{2C32A985-7F77-4763-9F8E-27FF86062AF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +90,10 @@ Global
 		{88411227-A51F-4C1B-89F7-274BE74BE45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88411227-A51F-4C1B-89F7-274BE74BE45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88411227-A51F-4C1B-89F7-274BE74BE45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C32A985-7F77-4763-9F8E-27FF86062AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C32A985-7F77-4763-9F8E-27FF86062AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C32A985-7F77-4763-9F8E-27FF86062AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C32A985-7F77-4763-9F8E-27FF86062AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +111,8 @@ Global
 		{C0F93676-6AB3-4C13-A80A-A3DAF6955C36} = {28D9D960-3911-4A69-9406-4B2AE1665A0D}
 		{3C8BD7F8-1032-490D-9339-DF9E4FB27BEC} = {28D9D960-3911-4A69-9406-4B2AE1665A0D}
 		{88411227-A51F-4C1B-89F7-274BE74BE45F} = {28D9D960-3911-4A69-9406-4B2AE1665A0D}
+		{8C8CCD87-2A76-4D08-9630-10CF8887FC15} = {2721C971-E433-424F-B8D7-1AE4A953773D}
+		{2C32A985-7F77-4763-9F8E-27FF86062AF0} = {8C8CCD87-2A76-4D08-9630-10CF8887FC15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B119A41A-B582-48CE-A1DD-DE9416FD8F0A}

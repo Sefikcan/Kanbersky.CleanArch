@@ -7,6 +7,9 @@ services:
     basketdb:
         image: redis
 
+    orderdb:
+        image: mcr.microsoft.com/mssql/server
+
     rabbitmq:
         image: rabbitmq:3-management-alpine
 
@@ -21,3 +24,15 @@ services:
         build:
             context: .
             dockerfile: src/Catalog/Kanbersky.CleanArch.Catalog.Api/Dockerfile
+
+    kanbersky.cleanarch.order.api:
+        image: ${DOCKER_REGISTRY-}kanberskycleanarchorderapi
+        build:
+            context: .
+            dockerfile: src/Order/Kanbersky.CleanArch.Order.Api/Dockerfile
+  
+    kanbersky.cleanarch.apigateway:
+        image: ${DOCKER_REGISTRY-}kanberskycleanarchapigateway
+        build:
+            context: .
+            dockerfile: src/ApiGateway/Kanbersky.CleanArch.ApiGateway/Dockerfile

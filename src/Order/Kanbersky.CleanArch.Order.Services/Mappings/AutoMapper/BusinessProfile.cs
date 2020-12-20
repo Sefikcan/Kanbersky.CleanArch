@@ -10,6 +10,8 @@ namespace Kanbersky.CleanArch.Order.Services.Mappings.AutoMapper
         {
             CreateMap<Infrastructure.Entities.Order, OrderResponseModel>().ReverseMap();
             CreateMap<Infrastructure.Entities.Order, CheckoutOrderCommand>().ReverseMap();
+
+            CreateMap<CheckoutOrderCommand, CheckoutOrderCommand>().ReverseMap();
         }
     }
 }

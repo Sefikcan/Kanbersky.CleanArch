@@ -53,6 +53,8 @@ namespace Kanbersky.CleanArch.Order.Api
                 endpoints.MapControllers();
             });
 
+            app.UseServiceLayer();
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
