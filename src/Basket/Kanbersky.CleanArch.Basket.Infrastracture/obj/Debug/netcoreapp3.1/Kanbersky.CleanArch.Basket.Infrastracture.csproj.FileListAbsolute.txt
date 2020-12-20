@@ -21,3 +21,4 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.Cl
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.CleanArch.Basket.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Core.dll
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.CleanArch.Basket.Infrastracture\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Core.pdb
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.CleanArch.Basket.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Basket.Infrastracture.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.CleanArch.Basket.Infrastracture\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Basket.Infrastracture.csprojAssemblyReference.cache

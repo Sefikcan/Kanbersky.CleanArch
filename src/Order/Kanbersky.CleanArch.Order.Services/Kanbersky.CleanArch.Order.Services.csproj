@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\Request\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Kanbersky.CleanArch.Core\Kanbersky.CleanArch.Core.csproj" />
+    <Reference Include="Kanbersky.CleanArch.Order.Infrastructure">
+      <HintPath>..\Kanbersky.CleanArch.Order.Infrastructure\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

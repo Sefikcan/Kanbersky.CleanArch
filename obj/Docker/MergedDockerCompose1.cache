@@ -1,0 +1,105 @@
+services:
+  basketdb:
+    container_name: basketdb
+    image: redis
+    ports:
+    - published: 6379
+      target: 6379
+    restart: always
+  catalogdb:
+    container_name: catalogdb
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - /site:/data/db:rw
+  kanbersky.cleanarch.basket.api:
+    build:
+      context: D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch
+      dockerfile: src/Basket/Kanbersky.CleanArch.Basket.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Kanbersky.CleanArch.Basket.Api
+      target: base
+    container_name: Kanbersky.CleanArch.Basket.Api
+    depends_on:
+      basketdb:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+      RabbitMQSettings:HostName: rabbitmq
+      RedisSettings:ConnectionString: basketdb:6379
+    image: kanberskycleanarchbasketapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/Kanbersky.CleanArch.Basket.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8001
+      target: 80
+    tty: true
+    volumes:
+    - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Basket\Kanbersky.CleanArch.Basket.Api:/app:rw
+    - C:\Users\User\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\User\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\User\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\User\.nuget\packages:/root/.nuget/packages:ro
+    - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch:/src:rw
+  kanbersky.cleanarch.catalog.api:
+    build:
+      context: D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch
+      dockerfile: src/Catalog/Kanbersky.CleanArch.Catalog.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Kanbersky.CleanArch.Catalog.Api
+      target: base
+    container_name: Kanbersky.CleanArch.Catalog.Api
+    depends_on:
+      catalogdb:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      CatalogDbSettings:ConnectionString: mongodb://catalogdb:27017
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: kanberskycleanarchcatalogapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/Kanbersky.CleanArch.Catalog.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8000
+      target: 80
+    tty: true
+    volumes:
+    - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Catalog\Kanbersky.CleanArch.Catalog.Api:/app:rw
+    - C:\Users\User\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\User\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - C:\Users\User\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\User\.nuget\packages:/root/.nuget/packages:ro
+    - D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch:/src:rw
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    restart: always
+version: '3.4'

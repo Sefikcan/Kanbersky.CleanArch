@@ -33,3 +33,7 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\bin\Debug\Kanbersky.Cle
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\bin\Debug\Kanbersky.CleanArch.Basket.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\bin\Debug\RabbitMQ.Client.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\bin\Debug\System.Threading.Channels.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\bin\Debug\Kanbersky.CleanArch.Basket.Services.pdb

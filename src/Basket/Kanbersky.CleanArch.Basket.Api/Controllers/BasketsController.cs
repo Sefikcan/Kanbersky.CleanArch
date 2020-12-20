@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Kanbersky.CleanArch.Basket.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/baskets")]
     [ApiController]
     public class BasketsController : CleanArchControllerBase
     {

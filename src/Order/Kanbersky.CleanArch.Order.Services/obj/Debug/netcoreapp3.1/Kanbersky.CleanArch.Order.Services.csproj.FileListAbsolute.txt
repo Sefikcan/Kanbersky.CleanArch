@@ -1,0 +1,14 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\bin\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.CleanArch\src\Order\Kanbersky.CleanArch.Order.Services\obj\Debug\netcoreapp3.1\Kanbersky.CleanArch.Order.Services.pdb
